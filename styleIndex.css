@@ -10,7 +10,7 @@ body{
     width: 100vw;
     height: 100vh;
     background-size:cover;
-    background-image: url("../images/mes images/background2.jpg");
+    background-image: url("mes images/background2.jpg");
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
@@ -28,8 +28,8 @@ body .bg{
     background-size: cover;
     z-index: -1;
 }
-body .bg1 {background-image: url("../images/mes images/background1.jpg");}
-body .bg2 {background-image: url("../images/mes images/background2.jpg");}
+body .bg1 {background-image: url("mes images/background1.jpg");}
+body .bg2 {background-image: url("mes images/background2.jpg");}
 /* body .bg3 {background-image: url("./assets/images/mes images/background3.jpg");} */
 /* body .bg4 {background-image: url("./assets/images/mes images/background4.jpg");} */
 /* body .bg5 {background-image: url("./assets/images/mes images/background5.jpg");} */
