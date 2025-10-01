@@ -1,0 +1,179 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    /* background-position: 50% 50%; */
+    width: 100vw;
+    height: 100vh;
+    background-size:cover;
+    background-image: url("../images/mes images/background2.jpg");
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+
+}
+
+body .bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    z-index: -1;
+}
+body .bg1 {background-image: url("../images/mes images/background1.jpg");}
+body .bg2 {background-image: url("../images/mes images/background2.jpg");}
+/* body .bg3 {background-image: url("./assets/images/mes images/background3.jpg");} */
+/* body .bg4 {background-image: url("./assets/images/mes images/background4.jpg");} */
+/* body .bg5 {background-image: url("./assets/images/mes images/background5.jpg");} */
+
+header.my-navbar{
+    display: flex;
+    /* background: #efa; */
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    font-size: 20px;
+}
+
+.my-navbar .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+    text-transform: capitalize;
+}
+
+.my-navbar .my-nav-link {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    font-size: 0.8em;
+}
+
+.my-navbar .my-nav-link a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+    transition: all 1s ease;
+}
+
+.my-nav-link a::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: transparent;
+    width: 0%;
+    height: 100%;
+    transition: all .5s ease;
+    border-bottom: 2px solid #fff;
+}
+
+.my-nav-link a:hover::before, .my-nav-link a.active::before{
+    width: 100%;
+}
+
+
+.my-navbar .my-nav-link .login-bt {
+    /* background-color: #fff; */
+    color: white;
+    outline: none;
+    border:2px solid #fff;
+    padding: 2px 20px;
+    border-radius: 20px;
+    background: transparent;
+    transition: .3s ease;
+}
+.my-nav-link .login-bt:hover{
+    background: white;
+    color: black;
+}
+
+
+/* design section */
+section{
+    flex-grow: 1;
+    /* background: red; */
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: white;
+}
+
+section p {
+    font-size: 1.2em;
+    width: 60%;
+    text-align: center
+}
+section h1 {
+    font-size: 3em;
+
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+section button {
+    font-size: 1.3em;
+    padding: 2px 20px;
+    /* outline: none; */
+    color: white;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    background: transparent;
+    transition: all .3s ease;
+}
+
+section button:hover{
+    background: white;
+    color: black;
+}
+
+/* Media Query */
+
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+    header.my-navbar {font-size: 24px;}
+}
+
+@media (max-width: 768px) {
+    section p {width: 80%}
+}
+
+@media (max-width: 640px) {header.my-navbar{font-size: 18px;}}
+@media (max-width: 430px) {
+    header.my-navbar {
+        flex-direction: column;
+        font-size: 18px;
+    }
+    body{font-size: 12px;}
+    section h4 {font-size: 1em;}
+    section h1 {font-size: 2.5em;}
+    section p {width: 100%;}
+}
+
+@media (min-width: 1440px) {
+    header.my-navbar {font-size: 30px;}
+    section h4 {font-size: 2em;}
+    section h1 {font-size: 4em;}
+    section p {font-size: 1.5em;}
+    section button {font-size: 2em; border-radius: 30px;}
+}
+@media (min-width: 2560px) {
+    .my-navbar .my-nav-link .login-bt {border-radius: 50px;}
+    header.my-navbar {font-size: 50px;}
+    section h4 {font-size: 3.5em;}
+    section h1 {font-size: 8em;}
+    section p {font-size: 2.8em;}
+    section button {font-size: 3.5em; border-radius: 50px;}
+}
